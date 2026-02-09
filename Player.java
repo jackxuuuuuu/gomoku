@@ -1,3 +1,5 @@
+package com.gomoku;
+
 public class Player {
     private String name;
     private char symbol; // 'X' or 'O'
