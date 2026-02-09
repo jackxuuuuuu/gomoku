@@ -1,4 +1,4 @@
-// Complete implementation of Board management for Gomoku
+package com.gomoku;
 
 public class Board {
     private static final int SIZE = 15;
@@ -17,7 +17,7 @@ public class Board {
     }
 
     public boolean checkWin(int player) {
-        // Check all directions: horizontal, vertical, diagonal (","), diagonal (\)
+        // Check all directions: horizontal, vertical, diagonal (" "), diagonal (\\)
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
                 if (checkDirection(i, j, player)) {
@@ -34,8 +34,8 @@ public class Board {
         }
         return checkLine(x, y, player, 1, 0) || // Horizontal
                checkLine(x, y, player, 0, 1) || // Vertical
-               checkLine(x, y, player, 1, 1) || // Diagonal (")
-               checkLine(x, y, player, 1, -1);  // Diagonal (\)
+               checkLine(x, y, player, 1, 1) || // Diagonal (" ")
+               checkLine(x, y, player, 1, -1);  // Diagonal (\\)
     }
 
     private boolean checkLine(int x, int y, int player, int dx, int dy) {
