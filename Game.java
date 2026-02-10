@@ -1,4 +1,4 @@
-// Game.java
+package com.gomoku;
 
 import java.util.Scanner;
 
